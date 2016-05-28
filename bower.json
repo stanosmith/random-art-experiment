@@ -1,0 +1,21 @@
+{
+  "name": "random-art-experiment",
+  "homepage": "https://github.com/stanosmith/random-art-experiment",
+  "authors": [
+    "Stan Smith <choicedesign@gmail.com>",
+    "Brad Phillips"
+  ],
+  "description": "An art experiment where each user experiences a random set of audio, imagery and text.",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zeptojs": "^1.1.6"
+  }
+}
