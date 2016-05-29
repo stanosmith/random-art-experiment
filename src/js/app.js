@@ -76,39 +76,27 @@
   function init() {
     console.log('Hello world!');
 
-    var images, sounds, text = [];
+    var images, sounds, texts = [];
 
     // TODO: Create a randomized array of each item
-    randomizeImages(mockData.images);
-    randomizeSounds(mockData.sounds);
-    randomizeTexts(mockData.texts);
+    images = randomizeData(mockData.images);
+    sounds = randomizeData(mockData.sounds);
+    texts = randomizeData(mockData.texts);
+
+    console.log(images);
+    console.log(sounds);
+    console.log(texts);
   }
 
-  function randomizeImages(imagesData) {
-    console.log('randomizeImages()...');
+  function randomizeData(data) {
+    var randomizedData = [];
 
-    $.each(imagesData, function (obj) {
-      console.log('obj: ' + obj);
-
+    $.each(data, function (index, item) {
+      console.log(item);
+      randomizedData[index] = item;
     })
-  }
 
-  function randomizeSounds(soundsData) {
-    console.log('randomizeSounds()...');
-
-    $.each(soundsData, function (obj) {
-      console.log('obj: ' + obj);
-
-    })
-  }
-
-  function randomizeTexts(textsData) {
-    console.log('randomizeTexts()...');
-
-    $.each(textsData, function (obj) {
-      console.log('obj: ' + obj);
-
-    })
+    return randomizedData;
   }
 
 })(Zepto);
