@@ -5,100 +5,233 @@
 (function ($) {
   'use strict';
 
-  var mockData = {
-    'images': [
-      {
-        'imageName': 'ImageName1',
-        'imageUrl': 'ImageUrl1',
-        'imageAlt': 'ImageAlt1',
-        'imageAuthor': 'ImageAuthor1'
-      },
-      {
-        'imageName': 'ImageName2',
-        'imageUrl': 'ImageUrl2',
-        'imageAlt': 'ImageAlt2',
-        'imageAuthor': 'ImageAuthor2'
-      },
-      {
-        'imageName': 'ImageName3',
-        'imageUrl': 'ImageUrl3',
-        'imageAlt': 'ImageAlt3',
-        'imageAuthor': 'ImageAuthor3'
-      },
-      {
-        'imageName': 'ImageName4',
-        'imageUrl': 'ImageUrl4',
-        'imageAlt': 'ImageAlt4',
-        'imageAuthor': 'ImageAuthor4'
-      },
-      {
-        'imageName': 'ImageName5',
-        'imageUrl': 'ImageUrl5',
-        'imageAlt': 'ImageAlt5',
-        'imageAuthor': 'ImageAuthor5'
-      }
-    ],
-    'sounds': [
-      {
-        'soundName': 'SoundName1',
-        'soundUrl': 'SoundUrl1',
-        'soundAuthor': 'SoundAuthor1'
-      },
-      {
-        'soundName': 'SoundName2',
-        'soundUrl': 'SoundUrl2',
-        'soundAuthor': 'SoundAuthor2'
-      },
-      {
-        'soundName': 'SoundName3',
-        'soundUrl': 'SoundUrl3',
-        'soundAuthor': 'SoundAuthor3'
-      },
-      {
-        'soundName': 'SoundName4',
-        'soundUrl': 'SoundUrl4',
-        'soundAuthor': 'SoundAuthor4'
-      },
-      {
-        'soundName': 'SoundName5',
-        'soundUrl': 'SoundUrl5',
-        'soundAuthor': 'SoundAuthor5'
-      }
-    ],
-    'texts': [
-      {
-        'textContent': 'TextContent1',
-        'textAuthor': 'TextAuthor1'
-      },
-      {
-        'textContent': 'TextContent2',
-        'textAuthor': 'TextAuthor2'
-      },
-      {
-        'textContent': 'TextContent3',
-        'textAuthor': 'TextAuthor3'
-      },
-      {
-        'textContent': 'TextContent4',
-        'textAuthor': 'TextAuthor4'
-      },
-      {
-        'textContent': 'TextContent5',
-        'textAuthor': 'TextAuthor5'
-      }
-    ]
-  };
-  
+  var mockData = [
+    {
+      'imageUrl': 'imageUrl1',
+      'imageAuthor': 'imageAuthor1',
+      'imageAlt': 'imageAlt1',
+      'soundName': 'soundName1',
+      'soundUrl': 'soundUrl1',
+      'soundAuthor': 'soundAuthor1',
+      'textContent': 'textContent1',
+      'textAuthor': 'textAuthor1'
+    },
+    {
+      'imageUrl': 'imageUrl2',
+      'imageAuthor': 'imageAuthor2',
+      'imageAlt': 'imageAlt2',
+      'soundName': 'soundName2',
+      'soundUrl': 'soundUrl2',
+      'soundAuthor': 'soundAuthor2',
+      'textContent': 'textContent2',
+      'textAuthor': 'textAuthor2'
+    },
+    {
+      'imageUrl': 'imageUrl3',
+      'imageAuthor': 'imageAuthor3',
+      'imageAlt': 'imageAlt3',
+      'soundName': 'soundName3',
+      'soundUrl': 'soundUrl3',
+      'soundAuthor': 'soundAuthor3',
+      'textContent': 'textContent3',
+      'textAuthor': 'textAuthor3'
+    },
+    {
+      'imageUrl': 'imageUrl4',
+      'imageAuthor': 'imageAuthor4',
+      'imageAlt': 'imageAlt4',
+      'soundName': 'soundName4',
+      'soundUrl': 'soundUrl4',
+      'soundAuthor': 'soundAuthor4',
+      'textContent': 'textContent4',
+      'textAuthor': 'textAuthor4'
+    },
+    {
+      'imageUrl': 'imageUrl5',
+      'imageAuthor': 'imageAuthor5',
+      'imageAlt': 'imageAlt5',
+      'soundName': 'soundName5',
+      'soundUrl': 'soundUrl5',
+      'soundAuthor': 'soundAuthor5',
+      'textContent': 'textContent5',
+      'textAuthor': 'textAuthor5'
+    },
+    {
+      'imageUrl': 'imageUrl6',
+      'imageAuthor': 'imageAuthor6',
+      'imageAlt': 'imageAlt6',
+      'soundName': 'soundName6',
+      'soundUrl': 'soundUrl6',
+      'soundAuthor': 'soundAuthor6',
+      'textContent': 'textContent6',
+      'textAuthor': 'textAuthor6'
+    },
+    {
+      'imageUrl': 'imageUrl7',
+      'imageAuthor': 'imageAuthor7',
+      'imageAlt': 'imageAlt7',
+      'soundName': 'soundName7',
+      'soundUrl': 'soundUrl7',
+      'soundAuthor': 'soundAuthor7',
+      'textContent': 'textContent7',
+      'textAuthor': 'textAuthor7'
+    },
+    {
+      'imageUrl': 'imageUrl8',
+      'imageAuthor': 'imageAuthor8',
+      'imageAlt': 'imageAlt8',
+      'soundName': 'soundName8',
+      'soundUrl': 'soundUrl8',
+      'soundAuthor': 'soundAuthor8',
+      'textContent': 'textContent8',
+      'textAuthor': 'textAuthor8'
+    },
+    {
+      'imageUrl': 'imageUrl9',
+      'imageAuthor': 'imageAuthor9',
+      'imageAlt': 'imageAlt9',
+      'soundName': 'soundName9',
+      'soundUrl': 'soundUrl9',
+      'soundAuthor': 'soundAuthor9',
+      'textContent': 'textContent9',
+      'textAuthor': 'textAuthor9'
+    },
+    {
+      'imageUrl': 'imageUrl10',
+      'imageAuthor': 'imageAuthor10',
+      'imageAlt': 'imageAlt10',
+      'soundName': 'soundName10',
+      'soundUrl': 'soundUrl10',
+      'soundAuthor': 'soundAuthor10',
+      'textContent': 'textContent10',
+      'textAuthor': 'textAuthor10'
+    },
+    {
+      'imageUrl': 'imageUrl11',
+      'imageAuthor': 'imageAuthor11',
+      'imageAlt': 'imageAlt11',
+      'soundName': 'soundName11',
+      'soundUrl': 'soundUrl11',
+      'soundAuthor': 'soundAuthor11',
+      'textContent': 'textContent11',
+      'textAuthor': 'textAuthor11'
+    },
+    {
+      'imageUrl': 'imageUrl12',
+      'imageAuthor': 'imageAuthor12',
+      'imageAlt': 'imageAlt12',
+      'soundName': 'soundName12',
+      'soundUrl': 'soundUrl12',
+      'soundAuthor': 'soundAuthor12',
+      'textContent': 'textContent12',
+      'textAuthor': 'textAuthor12'
+    },
+    {
+      'imageUrl': 'imageUrl13',
+      'imageAuthor': 'imageAuthor13',
+      'imageAlt': 'imageAlt13',
+      'soundName': 'soundName13',
+      'soundUrl': 'soundUrl13',
+      'soundAuthor': 'soundAuthor13',
+      'textContent': 'textContent13',
+      'textAuthor': 'textAuthor13'
+    },
+    {
+      'imageUrl': 'imageUrl14',
+      'imageAuthor': 'imageAuthor14',
+      'imageAlt': 'imageAlt14',
+      'soundName': 'soundName14',
+      'soundUrl': 'soundUrl14',
+      'soundAuthor': 'soundAuthor14',
+      'textContent': 'textContent14',
+      'textAuthor': 'textAuthor14'
+    },
+    {
+      'imageUrl': 'imageUrl15',
+      'imageAuthor': 'imageAuthor15',
+      'imageAlt': 'imageAlt15',
+      'soundName': 'soundName15',
+      'soundUrl': 'soundUrl15',
+      'soundAuthor': 'soundAuthor15',
+      'textContent': 'textContent15',
+      'textAuthor': 'textAuthor15'
+    },
+    {
+      'imageUrl': 'imageUrl16',
+      'imageAuthor': 'imageAuthor16',
+      'imageAlt': 'imageAlt16',
+      'soundName': 'soundName16',
+      'soundUrl': 'soundUrl16',
+      'soundAuthor': 'soundAuthor16',
+      'textContent': 'textContent16',
+      'textAuthor': 'textAuthor16'
+    },
+    {
+      'imageUrl': 'imageUrl17',
+      'imageAuthor': 'imageAuthor17',
+      'imageAlt': 'imageAlt17',
+      'soundName': 'soundName17',
+      'soundUrl': 'soundUrl17',
+      'soundAuthor': 'soundAuthor17',
+      'textContent': 'textContent17',
+      'textAuthor': 'textAuthor17'
+    },
+    {
+      'imageUrl': 'imageUrl18',
+      'imageAuthor': 'imageAuthor18',
+      'imageAlt': 'imageAlt18',
+      'soundName': 'soundName18',
+      'soundUrl': 'soundUrl18',
+      'soundAuthor': 'soundAuthor18',
+      'textContent': 'textContent18',
+      'textAuthor': 'textAuthor18'
+    },
+    {
+      'imageUrl': 'imageUrl19',
+      'imageAuthor': 'imageAuthor19',
+      'imageAlt': 'imageAlt19',
+      'soundName': 'soundName19',
+      'soundUrl': 'soundUrl19',
+      'soundAuthor': 'soundAuthor19',
+      'textContent': 'textContent19',
+      'textAuthor': 'textAuthor19'
+    },
+    {
+      'imageUrl': 'imageUrl20',
+      'imageAuthor': 'imageAuthor20',
+      'imageAlt': 'imageAlt20',
+      'soundName': 'soundName20',
+      'soundUrl': 'soundUrl20',
+      'soundAuthor': 'soundAuthor20',
+      'textContent': 'textContent20',
+      'textAuthor': 'textAuthor20'
+    },
+    {
+      'imageUrl': 'imageUrl21',
+      'imageAuthor': 'imageAuthor21',
+      'imageAlt': 'imageAlt21',
+      'soundName': 'soundName21',
+      'soundUrl': 'soundUrl21',
+      'soundAuthor': 'soundAuthor21',
+      'textContent': 'textContent21',
+      'textAuthor': 'textAuthor21'
+    }
+  ];
+
   init();
 
   function init() {
-    var images = shuffle(mockData.images);
-    var sounds = shuffle(mockData.sounds);
-    var texts = shuffle(mockData.texts);
+    var randomizedData = shuffle(mockData);
+    var separator = ' - ';
 
-    console.log(images);
-    console.log(sounds);
-    console.log(texts);
+    $.each(randomizedData, function (index, item) {
+      console.log(index);
+      console.log(item);
+
+      // TODO: Add list items
+      $('#playlist').append('<li>' + item.imageUrl + separator + item.soundUrl + separator + item.textContent + '</li>');
+
+    });
   }
 
 
