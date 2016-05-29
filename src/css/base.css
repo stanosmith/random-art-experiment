@@ -1,3 +1,22 @@
+/*
+ *
+ * CSS Goal: Follow the ITCSS methodology
+ * Watch: https://youtu.be/1OKZOV-iLj4?t=401
+ * Read:  https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+ *
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
 .item-complete {
   text-decoration: line-through;
 }
