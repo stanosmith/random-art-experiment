@@ -17,6 +17,18 @@ ul, ol {
   padding: 0;
 }
 
+.hero {
+  width: 96%;
+  margin: 0 auto;
+}
+
 .item-complete {
   text-decoration: line-through;
+}
+
+.playlist .playlistItem a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: aliceblue;
 }
