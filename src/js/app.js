@@ -229,7 +229,7 @@
       console.log(item);
 
       // TODO: Add list items
-      $('#playlist').append('<li class="playlistItem"><a href="#">' + item.imageUrl + separator + item.soundUrl + separator + item.textContent + '</a></li>');
+      $('#playlist').append('<li class="playlistItem">' + item.imageUrl + separator + item.soundUrl + separator + item.textContent + '</li>');
     });
   }
 
