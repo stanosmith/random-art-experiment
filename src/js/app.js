@@ -85,7 +85,7 @@
     $.each(data, function (index, item) {
       console.log(item);
       randomizedData[index] = item;
-    })
+    });
 
     return randomizedData;
   }
