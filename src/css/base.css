@@ -1,0 +1,68 @@
+/*
+ *
+ * CSS Goal: Follow the ITCSS (Inverted Triangle CSS) methodology
+ * Watch: https://youtu.be/1OKZOV-iLj4?t=401
+ * Read:  https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+ *
+ * 1. Settings  : Global variables, config switches
+ * 2. Tools     : Default mixins and functions
+ * 3. Generic   : Ground-zero styles (Normalize.css, resets, box-sizing, etc.)
+ * 4. Base      : Unclassed HTML elements (type selectors, e.g. a, ul, ol, etc.)
+ * 5. Objects   : Cosmetic-free design patterns
+ * 6. Components: Designed components, chunks of UI
+ * 7. Trumps    : Helpers and overrides
+ *
+ */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+/* Use border-box for box-sizing so padding doesn't add to the width or height of objects */
+/* Make sure box-sizing is inherited */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* By default all lists should not be styled */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+.hero {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.item-complete {
+  text-decoration: line-through;
+}
