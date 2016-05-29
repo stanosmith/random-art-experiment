@@ -6,6 +6,37 @@
  *
  */
 
+
+/*
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+   content: " "; /* 1 */
+   display: table; /* 2 */
+ }
+
+.clearfix:after {
+   clear: both;
+}
+
+
+/* Use border-box for box-sizing so padding doesn't add to the width or height of objects */
+/* Make sure box-sizing is inherited */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
