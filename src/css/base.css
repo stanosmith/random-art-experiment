@@ -1,11 +1,26 @@
 /*
  *
- * CSS Goal: Follow the ITCSS methodology
+ * CSS Goal: Follow the ITCSS (Inverted Triangle CSS) methodology
  * Watch: https://youtu.be/1OKZOV-iLj4?t=401
  * Read:  https://speakerdeck.com/dafed/managing-css-projects-with-itcss
  *
+ * 1. Settings  : Global variables, config switches
+ * 2. Tools     : Default mixins and functions
+ * 3. Generic   : Ground-zero styles (Normalize.css, resets, box-sizing, etc.)
+ * 4. Base      : Unclassed HTML elements (type selectors, e.g. a, ul, ol, etc.)
+ * 5. Objects   : Cosmetic-free design patterns
+ * 6. Components: Designed components, chunks of UI
+ * 7. Trumps    : Helpers and overrides
+ *
  */
 
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 /*
  * For modern browsers
@@ -19,12 +34,12 @@
 .clearfix,
 .clearfix:before,
 .clearfix:after {
-   content: " "; /* 1 */
-   display: table; /* 2 */
- }
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
 
 .clearfix:after {
-   clear: both;
+  clear: both;
 }
 
 
@@ -36,12 +51,6 @@
   box-sizing: border-box;
 }
 
-
-html, body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
 
 ul, ol {
   list-style: none;
