@@ -92,9 +92,6 @@
   init();
 
   function init() {
-    console.log('Hello world!');
-
-    // TODO: Create a randomized array of each item
     var images = shuffle(mockData.images);
     var sounds = shuffle(mockData.sounds);
     var texts = shuffle(mockData.texts);
