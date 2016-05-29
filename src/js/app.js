@@ -30,39 +30,30 @@
       {
         'soundName': 'SoundName',
         'soundUrl': 'SoundUrl',
-        'soundAlt': 'SoundAlt',
         'soundAuthor': 'SoundAuthor'
       },
       {
         'soundName': 'SoundName',
         'soundUrl': 'SoundUrl',
-        'soundAlt': 'SoundAlt',
         'soundAuthor': 'SoundAuthor'
       },
       {
         'soundName': 'SoundName',
         'soundUrl': 'SoundUrl',
-        'soundAlt': 'SoundAlt',
         'soundAuthor': 'SoundAuthor'
       }
     ],
     'texts': [
       {
-        'textName': 'TextName',
-        'textUrl': 'TextUrl',
-        'textAlt': 'TextAlt',
+        'textContent': 'TextContent',
         'textAuthor': 'TextAuthor'
       },
       {
-        'textName': 'TextName',
-        'textUrl': 'TextUrl',
-        'textAlt': 'TextAlt',
+        'textContent': 'TextContent',
         'textAuthor': 'TextAuthor'
       },
       {
-        'textName': 'TextName',
-        'textUrl': 'TextUrl',
-        'textAlt': 'TextAlt',
+        'textContent': 'TextContent',
         'textAuthor': 'TextAuthor'
       }
     ]
