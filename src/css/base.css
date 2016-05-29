@@ -60,6 +60,8 @@ ul, ol {
 .playlist .playlistItem a {
   display: inline-block;
   padding: 12px 24px;
+  margin-bottom: 16px;
   border-radius: 6px;
   background-color: aliceblue;
+  text-decoration: none;
 }
