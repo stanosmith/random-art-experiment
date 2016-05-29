@@ -89,9 +89,6 @@
     ]
   };
   
-  // UI Hello world
-  $('#helloWorld').html('Oh, it&rsquo;s on now!');
-
   init();
 
   function init() {
