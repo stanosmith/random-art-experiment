@@ -20,6 +20,10 @@ html, body {
   padding: 0;
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  /*background-color: #212121;*/
+  /*color: #ccc;*/
 }
 
 /*
@@ -65,4 +69,9 @@ ul, ol {
 
 .item-complete {
   text-decoration: line-through;
+}
+
+.playlist-item {
+  height: 50vh;
+  padding-top: 50px;
 }

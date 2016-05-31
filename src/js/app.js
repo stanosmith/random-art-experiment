@@ -217,20 +217,93 @@
       'textAuthor': 'textAuthor21'
     }
   ];
+  var randomizedData = shuffle(mockData);
+  var totalSlides = randomizedData.length;
+  var currentSlide = 1;
+  var elapsedSeconds = 0;
+  var elapsedMinutes = 0;
+  var separator = ' - ';
+  var slideDuration = 5;// Seconds
+
 
   init();
 
+
   function init() {
-    var randomizedData = shuffle(mockData);
-    var separator = ' - ';
 
-    $.each(randomizedData, function (index, item) {
-      console.log(index);
-      console.log(item);
+    // Instantiate initial values
+    $('#totalSlides').html(totalSlides);
+    $('#currentSlide').html(currentSlide);
+    $('#timeElapsed').html(elapsedSeconds);
+    updateSlide();
+    updateTimer();
 
-      // TODO: Add list items
-      $('#playlist').append('<li class="playlistItem">' + item.imageUrl + separator + item.soundUrl + separator + item.textContent + '</li>');
-    });
+    // Iterate through the randomized array
+    // $.each(randomizedData, function (index, item) {
+    //   // TODO: Add list items
+    //   $('#playlist').append('<li class="playlist-item">' + item.imageUrl + separator + item.soundUrl + separator + item.textContent + '</li>');
+    // });
+
+    startSlideshow();
+    startTimer();
+  }
+
+
+  function updateSlide() {
+    var slideIndex = currentSlide - 1;
+    $('#playlistItem').html(randomizedData[slideIndex].imageUrl + separator + randomizedData[slideIndex].soundUrl + separator + randomizedData[slideIndex].textContent);
+  }
+
+
+  function startSlideshow() {
+    var slideshowInterval = setInterval(function () {
+
+      currentSlide++;
+
+      $('#currentSlide').html(currentSlide);
+
+      updateSlide();
+
+      // Need to offset the total slides
+      if (currentSlide === totalSlides) {
+        console.log('Stop the slideshow and show some kind of message.');
+        clearInterval(slideshowInterval);
+      }
+    }, slideDuration * 1000);
+  }
+
+
+
+  function updateTimer() {
+    var seconds = elapsedSeconds.toString();
+    if (elapsedSeconds < 10) {
+      seconds = '0' + elapsedSeconds;
+    }
+    $('#elapsedTime').html(elapsedMinutes + ':' + seconds);
+  }
+
+
+  function startTimer() {
+    var timerInterval = setInterval(function () {
+      var totalElapsedSeconds = elapsedMinutes * 60 + elapsedSeconds;
+
+      elapsedSeconds++;
+
+      updateTimer();
+
+      if (elapsedSeconds === 60) {
+        // Add minutes to UI
+        elapsedMinutes++;
+        // Reset elapsed seconds
+        elapsedSeconds = 0;
+      }
+
+      // Need to offset the total slides
+      if (totalElapsedSeconds === totalSlides * slideDuration) {
+        console.log('Turn off the timer.');
+        clearInterval(timerInterval);
+      }
+    }, 1000);
   }
 
 
